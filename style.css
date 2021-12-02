@@ -39,3 +39,14 @@
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+#form-login {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+#form-login input {
+  padding: 10px;
+  margin: 15px 10px;
+}
