@@ -33,7 +33,9 @@
 #evaluation-form {
   display: flex;
   width: 675px;
-  height: 30px;
-  background-color: brown;
   flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
 }
