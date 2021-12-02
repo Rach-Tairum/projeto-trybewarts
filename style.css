@@ -25,3 +25,14 @@
 .trybewarts-header-logo {
   width: 50px;
 }
+
+#main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  height: 30px;
+  background-color: brown;
+}
