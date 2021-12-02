@@ -35,4 +35,5 @@
   width: 675px;
   height: 30px;
   background-color: brown;
+  flex-direction: column;
 }
