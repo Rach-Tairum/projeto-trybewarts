@@ -23,3 +23,11 @@ function botaoSubmit() {
 }
 
 botaoSubmit();
+
+// Referência:
+// https://pt.stackoverflow.com/questions/25753/como-fazer-um-contador-de-caracteres-de-uma-textarea
+// function contador() {
+//   let contador = document.getElementById('counter');
+// }
+
+// contador();
