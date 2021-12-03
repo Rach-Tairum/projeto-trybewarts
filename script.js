@@ -12,3 +12,14 @@ function botaoEntrar() {
   });
 }
 botaoEntrar();
+
+function botaoSubmit() {
+  const submit = document.getElementById('submit-btn');
+  const checkbox = document.getElementById('agreement');
+
+  checkbox.addEventListener('click', () => {
+    submit.disabled = false;
+  });
+}
+
+botaoSubmit();
