@@ -13,6 +13,19 @@ function botaoEntrar() {
 }
 botaoEntrar();
 
+function limiteTextarea(valor) {
+  const quant = 500;
+  const total = valor.length;
+  if (total <= quant) {
+    const resto = quant - total;
+    document.getElementById('counter').innerHTML = resto;
+  } else {
+    document.getElementById('textarea').value = valor.substr(0, quant);
+  }
+}
+
+limiteTextarea();
+
 function botaoSubmit() {
   const submit = document.getElementById('submit-btn');
   const checkbox = document.getElementById('agreement');
@@ -26,8 +39,3 @@ botaoSubmit();
 
 // Referência:
 // https://pt.stackoverflow.com/questions/25753/como-fazer-um-contador-de-caracteres-de-uma-textarea
-// function contador() {
-//   let contador = document.getElementById('counter');
-// }
-
-// contador();
