@@ -13,18 +13,17 @@ function botaoEntrar() {
 }
 botaoEntrar();
 
-function limiteTextarea(valor) {
+const textArea = document.querySelector('textarea');
+function limiteTextarea() {
   const quant = 500;
-  const total = valor.length;
+  const total = textArea.value.length;
+  const counter = document.getElementById('counter');
   if (total <= quant) {
-    const resto = quant - total;
-    document.getElementById('counter').innerHTML = resto;
-  } else {
-    document.getElementById('textarea').value = valor.substr(0, quant);
+    counter.innerText = quant - total;
   }
 }
 
-limiteTextarea();
+textArea.addEventListener('keyup', limiteTextarea);
 
 function botaoSubmit() {
   const submit = document.getElementById('submit-btn');
