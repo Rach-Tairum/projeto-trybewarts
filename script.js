@@ -54,7 +54,7 @@ const escolhaConteudos = () => {
   return string;
 };
 
-function apresentaBloco1(nomeSobrenome, emailValue) {
+function apresentaBloco1(nomeSobrenome, emailValue, escolhaCasa) {
   const bloco1 = document.createElement('section');
   bloco1.id = 'dados iniciais';
   form.appendChild(bloco1);
@@ -68,17 +68,17 @@ function apresentaBloco1(nomeSobrenome, emailValue) {
   contato.className = 'dados_texto';
   contato.innerText = `Email: ${emailValue}`;
   bloco1.appendChild(contato);
-}
-
-function apresentaBloco2(escolhaCasa, escolhaFamilia, string, nota) {
-  const bloco2 = document.createElement('section');
-  bloco2.id = 'escolhas';
-  form.appendChild(bloco2);
 
   const casa = document.createElement('p');
   casa.className = 'dados_texto';
   casa.innerText = `Casa: ${escolhaCasa}`;
-  bloco2.appendChild(casa);
+  bloco1.appendChild(casa);
+}
+
+function apresentaBloco2(escolhaFamilia, string, nota) {
+  const bloco2 = document.createElement('section');
+  bloco2.id = 'escolhas';
+  form.appendChild(bloco2);
 
   const familia = document.createElement('p');
   familia.className = 'dados_texto';
@@ -113,7 +113,6 @@ function textoCompleto() {
     const nomeValor = nome.value;
     const sobrenomeValue = ultimoNome.value;
     const nomeSobrenome = `${nomeValor} ${sobrenomeValue}`;
-
     const emailValue = email.value;
     const escolhaCasa = casas.options[casas.selectedIndex].value;
     const escolhaFamilia = form.family.value;
@@ -123,8 +122,8 @@ function textoCompleto() {
 
     form.innerHTML = '';
 
-    apresentaBloco1(nomeSobrenome, emailValue);
-    apresentaBloco2(escolhaCasa, escolhaFamilia, string, nota);
+    apresentaBloco1(nomeSobrenome, emailValue, escolhaCasa);
+    apresentaBloco2(escolhaFamilia, string, nota);
     apresentaBloco3(observa);
   });
 }
